@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/customs.css">
+    <title>Товары</title>
+</head>
+<body>
+    <h1>Товары на складе</h1>
+    <table border="0">
+        <tr>
+            <th>Наименование</th>
+            <th>Описание</th>
+            <th>Вес 1 единицы</th>
+            <th>Количество</th>
+            <th>Цена поставщика</th>
+        </tr>
+        {% for product in products %}
+        <tr>
+            <td>{{ product.name }}</td>
+            <td>{{ product.desc }}</td>
+            <td>{{ product.weight }}</td>
+            <td>{{ product.quantity }}</td>
+            <td>{{ product.price }}</td>            
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <form action="add">
+        <button>Добавить товар</button>
+    </form>
+</body>
+</html>

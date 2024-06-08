@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Добавить заметку</h2>
+  <form method="post">
+    <div>
+      <label for="title">Наименование</label>
+      <input type="text" id="title" name="title">
+    </div>
+    <div>
+      <label for="description">Описание</label>
+      <input type="text" id="description" name="description">
+    </div>
+    <div>
+      <label for="content">Содержимое</label>
+      <textarea id="content" name="content"></textarea>
+    </div>
+    <button type="submit">Добавить заметку</button>
+  </form>
+{% endblock %}

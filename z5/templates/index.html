@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Заметки</h2>
+  <ul>
+    {% for note in notes %}
+      <li>
+        <a href="{{ url_for('note_detail', note_id=note.id) }}">{{ note.title }}</a> - {{ note.description }}
+        <a href="{{ url_for('delete_note', note_id=note.id) }}">(удалить)</a>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}

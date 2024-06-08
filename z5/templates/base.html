@@ -1,0 +1,19 @@
+<!doctype html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="http://127.0.0.1:5000/static/customs.css">
+    <title>Notes App</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="mt-5">Сайт заметок</h1>
+      <nav>
+        <a href="{{ url_for('index') }}">Главная страница</a>
+        <a href="{{ url_for('add_note') }}">Добавить заметку</a>
+      </nav>
+      <hr>
+      {% block content %}{% endblock %}
+    </div>
+  </body>
+</html>
